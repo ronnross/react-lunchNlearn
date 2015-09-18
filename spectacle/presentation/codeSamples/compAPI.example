@@ -1,0 +1,25 @@
+//Second.js
+...
+  render() {
+    return(
+      <div>
+        <h1>{this.props.message}</h1>
+        <p>Count is {this.props.count}<p>
+      <div>
+    )
+  }
+}
+second.propTypes = {
+  message: React.PropTypes.string,
+  name: React.PropTypes.number
+};
+...
+
+//App.js
+...
+  render() {
+    return(
+      <Second message="Hello World" count={1} />
+    )
+  }
+...

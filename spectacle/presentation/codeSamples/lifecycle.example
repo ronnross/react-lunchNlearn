@@ -1,0 +1,29 @@
+//App.js
+import React from 'react';
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {count: props.initialCount}
+  }
+
+  componentWillMount(){}
+
+  componentWillReceiveProps(){}
+
+  componentWillUpdate(){}
+
+  render() {
+    return(<button onClick={::this.clickEvent}></button>)
+  }
+
+  //custom event
+  clickEvent() {
+    this.setState({count: this.state.count + 1})
+  }
+
+  componentWillUnmount() //any cleanup needed
+}
+
+App.propTypes = { initialCount: React.PropTypes.number }
+App.defaultProps = { initialCount: 0 }

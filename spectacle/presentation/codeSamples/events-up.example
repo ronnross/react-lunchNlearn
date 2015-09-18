@@ -1,0 +1,33 @@
+//Button.js
+import React from 'react';
+
+export default class Button extends React.component {
+  render() {
+    return(
+      <button onClick="{this.buttonClick.bind(this)}">Click Me!</button>
+    )
+  }
+  buttonClick(){
+    this.props.anything();
+  }
+}
+
+
+//App.js
+import React from 'react';
+import Button from './Button.js';
+
+class App extends React.Component {
+  render() {
+    return(
+      <div>
+        <h1>Hello World</h1>
+        <div>Hello again</div>
+        <Button anything={this.doSomething.bind(this)} />
+      </div>
+    )
+  }
+  doSomething(){
+    //do stuff
+  }
+}

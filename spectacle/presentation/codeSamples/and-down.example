@@ -1,0 +1,26 @@
+//Second.js
+import React from 'react';
+
+class Second extends React.component {
+  render() {
+    return(
+      <h1>{this.props.message}</h1>
+    )
+  }
+}
+
+export default Second;
+
+//App.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class App extends React.Component {
+  render() {
+    return(
+      <Second message={this.props.message} event={obj} />
+    )
+  }
+}
+
+ReactDOM.render(<App message="Hello World" />, document.getElementById("main"))

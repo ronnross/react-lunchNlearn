@@ -1,0 +1,30 @@
+
+
+//Second.js
+import React from 'react';
+
+class Second extends React.component {
+  render() {
+    return(
+      <h2>Hello world a second time</h2>
+    )
+  }
+}
+
+export default Second;
+
+//App.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Second from './Second.js';
+
+class App extends React.Component {
+  render(){
+    return(
+      <h1>Hello World</h1>
+      <Second />
+    )
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById("main"));
